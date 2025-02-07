@@ -24,10 +24,14 @@
  </OUTPUT_FILES>
  <LABELS>
   <SETUP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>19</LINE></SETUP>
-  <MAIN><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>36</LINE></MAIN>
-  <DELAY><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>57</LINE></DELAY>
-  <SUB_DELAY1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>59</LINE></SUB_DELAY1>
-  <SUB_DELAY2><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>64</LINE></SUB_DELAY2>
-  <SUB_DELAY3><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>69</LINE></SUB_DELAY3>
+  <MAIN><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>47</LINE></MAIN>
+  <INCREMENTO1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>63</LINE></INCREMENTO1>
+  <DECREMENTO1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>69</LINE></DECREMENTO1>
+  <INCREMENTO2><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>75</LINE></INCREMENTO2>
+  <DECREMENTO2><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>81</LINE></DECREMENTO2>
+  <DELAY><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>86</LINE></DELAY>
+  <SUB_DELAY1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>88</LINE></SUB_DELAY1>
+  <SUB_DELAY2><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>93</LINE></SUB_DELAY2>
+  <SUB_DELAY3><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>98</LINE></SUB_DELAY3>
  </LABELS>
 </ASSEMBLER_INFO>

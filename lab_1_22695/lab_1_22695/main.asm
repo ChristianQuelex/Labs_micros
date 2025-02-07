@@ -2,7 +2,7 @@
 * Antirebote.asm
 *
 * Creado: 29-Jan-25 5:25:03 PM
-* Autor : Pedro Castillo
+* Autor : CHRISTIAN QUELEX
 * Descripción: 
 */
 // Encabezado
@@ -30,28 +30,57 @@ SETUP:
     LDI     R16, 0b00000001
     OUT     PORTB, R16  // Encender primer bit de puerto B
 
-    LDI     R17, 0xFF   // Variable para guardar estado de botones
-	ldi r24 , 0
+	// PORTC como salidas
+	LDI		R16, 0xFF
+	OUT		DDRC, R16	//setear puerto C como salida
+	LDI		R16, 0xFF
+	OUT		PORTC, R16	// Encender todos los bits del pueto C
+
+
+	// VALORES DE SALIDAS
+    LDI     R17, 0x00   // valor inicial R17
+	LDI		R19, 0x00	// valor inicial R18
+	LDI		R24 , 0		// valor inicial R24
+
+
 // Loop infinito
 MAIN:
-    IN      R16, PIND   // Guardando el estado de PORTD en R16  0xFF
-    CP      R17, R16    // Comparamos estado "viejo" con estado "nuevo"
-    BREQ    MAIN
-    CALL    DELAY
-    IN      R16, PIND
-    CP      R17, R16
-    BREQ    MAIN
-    // Volver a leer PIND
-    MOV     R17, R16
-    SBRS    R16, 2      // Salta si el bit 2 del PIND es 1 (no apachado)
-    inc     r24
-
-	sbrs r16, 1
-	dec r24
-
-	out portb, r24
+    OUT		PORTB, R17
+	OUT		PORTC, R18
+    SBIC    PIND, PD2      // Lea el puerto pd2
+    CALL	INCREMENTO1		// si es 1 llame a incremento
+	SBIC	PIND, PD3		// si no es 1 lea esta instruccion
+	CALL    DECREMENTO1
+	SBIC	PIND, PD4
+	CALL	INCREMENTO2
+	SBIC	PIND, PD5
+	CALL	DECREMENTO2
+	
 	     // Toggle de PB0
     RJMP    MAIN
+
+
+INCREMENTO1:
+	CALL	DELAY
+	INC		R17
+	OUT		PORTB, R17
+	RJMP	MAIN
+
+DECREMENTO1:
+	CALL	DELAY
+	DEC		R17
+	OUT		PORTB, R17
+	RJMP	MAIN 
+
+INCREMENTO2:
+	CALL	DELAY
+	INC		R19
+	OUT		PORTC, R19
+	RJMP	MAIN
+
+DECREMENTO2:
+	CALL	DELAY
+	INC		R19
 
 // Sub-rutina (no de interrupción)
 DELAY:
@@ -71,4 +100,6 @@ SUB_DELAY3:
     CPI     R18, 0
     BRNE    SUB_DELAY3
     RET
+
+
 // Rutinas de interrupción
