@@ -1,10 +1,10 @@
 
-AVRASM ver. 2.2.8  C:\Users\Chris Q\Documents\Micros\laboratorios\lab_1_22695\lab_1_22695\main.asm Wed Feb 05 19:50:30 2025
+AVRASM ver. 2.2.8  C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm Fri Feb 07 08:53:46 2025
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
-C:\Users\Chris Q\Documents\Micros\laboratorios\lab_1_22695\lab_1_22695\main.asm(9): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc'
+C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm(9): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
-C:\Users\Chris Q\Documents\Micros\laboratorios\lab_1_22695\lab_1_22695\main.asm(9): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc'
+C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm(9): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc'
                                  
                                  /*
                                  
@@ -1062,39 +1062,46 @@ C:\Users\Chris Q\Documents\Micros\laboratorios\lab_1_22695\lab_1_22695\main.asm(
 00000b b905                          OUT     PORTB, R16  // Encender primer bit de puerto B
                                  
 00000c ef1f                          LDI     R17, 0xFF   // Variable para guardar estado de botones
+00000d e080                      	ldi r24 , 0
                                  // Loop infinito
                                  MAIN:
-00000d b109                          IN      R16, PIND   // Guardando el estado de PORTD en R16  0xFF
-00000e 1710                          CP      R17, R16    // Comparamos estado "viejo" con estado "nuevo"
-00000f f3e9                          BREQ    MAIN
-000010 940e 0019                     CALL    DELAY
-000012 b109                          IN      R16, PIND
-000013 1710                          CP      R17, R16
-000014 f3c1                          BREQ    MAIN
+00000e b109                          IN      R16, PIND   // Guardando el estado de PORTD en R16  0xFF
+00000f 1710                          CP      R17, R16    // Comparamos estado "viejo" con estado "nuevo"
+000010 f3e9                          BREQ    MAIN
+000011 940e 001d                     CALL    DELAY
+000013 b109                          IN      R16, PIND
+000014 1710                          CP      R17, R16
+000015 f3c1                          BREQ    MAIN
                                      // Volver a leer PIND
-000015 2f10                          MOV     R17, R16
-000016 ff02                          SBRS    R16, 2      // Salta si el bit 2 del PIND es 1 (no apachado)
-000017 9a18                          SBI     PINB, 0     // Toggle de PB0
-000018 cff4                          RJMP    MAIN
+000016 2f10                          MOV     R17, R16
+000017 ff02                          SBRS    R16, 2      // Salta si el bit 2 del PIND es 1 (no apachado)
+000018 9583                          inc     r24
+                                 
+000019 ff01                      	sbrs r16, 1
+00001a 958a                      	dec r24
+                                 
+00001b b985                      	out portb, r24
+                                 	     // Toggle de PB0
+00001c cff1                          RJMP    MAIN
                                  
                                  // Sub-rutina (no de interrupción)
                                  DELAY:
-000019 ef2f                          LDI     R18, 0xFF
-                                 SUB_DELAY1:
-00001a 952a                          DEC     R18
-00001b 3020                          CPI     R18, 0
-00001c f7e9                          BRNE    SUB_DELAY1
 00001d ef2f                          LDI     R18, 0xFF
-                                 SUB_DELAY2:
+                                 SUB_DELAY1:
 00001e 952a                          DEC     R18
 00001f 3020                          CPI     R18, 0
-000020 f7e9                          BRNE    SUB_DELAY2
+000020 f7e9                          BRNE    SUB_DELAY1
 000021 ef2f                          LDI     R18, 0xFF
-                                 SUB_DELAY3:
+                                 SUB_DELAY2:
 000022 952a                          DEC     R18
 000023 3020                          CPI     R18, 0
-000024 f7e9                          BRNE    SUB_DELAY3
-000025 9508                          RET
+000024 f7e9                          BRNE    SUB_DELAY2
+000025 ef2f                          LDI     R18, 0xFF
+                                 SUB_DELAY3:
+000026 952a                          DEC     R18
+000027 3020                          CPI     R18, 0
+000028 f7e9                          BRNE    SUB_DELAY3
+000029 9508                          RET
                                  // Rutinas de interrupción
 
 
@@ -1115,10 +1122,10 @@ counted separately from r26..r31 here.
 "ATmega328P" register use summary:
 x  :   0 y  :   0 z  :   0 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  18 r17:   4 r18:   9 r19:   0 r20:   0 
-r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
+r13:   0 r14:   0 r15:   0 r16:  19 r17:   4 r18:   9 r19:   0 r20:   0 
+r21:   0 r22:   0 r23:   0 r24:   4 r25:   0 r26:   0 r27:   0 r28:   0 
 r29:   0 r30:   0 r31:   0 
-Registers used: 3 out of 35 (8.6%)
+Registers used: 4 out of 35 (11.4%)
 
 "ATmega328P" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :   0 add   :   0 adiw  :   0 and   :   0 
@@ -1129,14 +1136,14 @@ brne  :   3 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0
 brvs  :   0 bset  :   0 bst   :   0 call  :   1 cbi   :   0 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   2 cpc   :   0 
-cpi   :   3 cpse  :   0 dec   :   3 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   2 inc   :   0 jmp   :   0 
-ld    :   0 ldd   :   0 ldi   :  10 lds   :   0 lpm   :   0 lsl   :   0 
+cpi   :   3 cpse  :   0 dec   :   4 eor   :   0 fmul  :   0 fmuls :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   2 inc   :   1 jmp   :   0 
+ld    :   0 ldd   :   0 ldi   :  11 lds   :   0 lpm   :   0 lsl   :   0 
 lsr   :   0 mov   :   1 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
-neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   6 pop   :   0 
+neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   7 pop   :   0 
 push  :   0 rcall :   0 ret   :   1 reti  :   0 rjmp  :   1 rol   :   0 
-ror   :   0 sbc   :   0 sbci  :   0 sbi   :   1 sbic  :   0 sbis  :   0 
-sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   1 sec   :   0 seh   :   0 
+ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
+sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   2 sec   :   0 seh   :   0 
 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
 sez   :   0 sleep :   0 spm   :   0 st    :   0 std   :   0 sts   :   0 
 sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
@@ -1145,7 +1152,7 @@ Instructions used: 14 out of 113 (12.4%)
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x00004c     76      0     76   32768   0.2%
+[.cseg] 0x000000 0x000054     84      0     84   32768   0.3%
 [.dseg] 0x000100 0x000100      0      0      0    2048   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
