@@ -23,13 +23,15 @@
   <FILE>lab_1_22695.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <SETUP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>23</LINE></SETUP>
-  <MAIN><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>58</LINE></MAIN>
-  <INCREMENTO1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>74</LINE></INCREMENTO1>
-  <DECREMENTO1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>81</LINE></DECREMENTO1>
+  <SETUP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>24</LINE></SETUP>
+  <MAIN><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>63</LINE></MAIN>
+  <INCREMENTO1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>77</LINE></INCREMENTO1>
+  <DECREMENTO1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>83</LINE></DECREMENTO1>
+  <INCREMENTO2><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>89</LINE></INCREMENTO2>
   <DECREMENTO2><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>95</LINE></DECREMENTO2>
-  <DELAY><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>103</LINE></DELAY>
-  <INCREMENTO2><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>88</LINE></INCREMENTO2>
-  <BUCLE><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>106</LINE></BUCLE>
+  <SUMANDO><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>111</LINE></SUMANDO>
+  <DELAY><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>126</LINE></DELAY>
+  <UNION><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>101</LINE></UNION>
+  <BUCLE><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_1_22695\lab_1_22695\main.asm</FILE><LINE>129</LINE></BUCLE>
  </LABELS>
 </ASSEMBLER_INFO>

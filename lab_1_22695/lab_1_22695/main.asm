@@ -15,23 +15,28 @@ OUT     SPL, R16
 LDI     R16, HIGH(RAMEND)
 OUT     SPH, R16
 
-.equ	SUBIR = PD2
-.equ	BAJAR = PD3
-.equ	SUBIR1 = PB4
-.equ	BAJAR1 = PB5
+.equ	SUBIR = PC3
+.equ	BAJAR = PC2
+.equ	SUBIR1 = PC1
+.equ	BAJAR1 = PC0
+.equ	SUMAR = PC4
 // Configurar el MCU
 SETUP:
     // Configurar pines de entrada y salida (DDRx, PORTx, PINx)
     // PORTD como entrada con pull-up habilitado
-    LDI     R16, 0b11110000
+
+	LDI	R16, 0x00	
+	STS	UCSR0B, R16
+
+    LDI     R16, 0xFF
     OUT     DDRD, R16   // Setear puerto D como entrada
-    LDI     R16, 0b00001111
+    LDI     R16, 0x00
     OUT     PORTD, R16  // Habilitar pull-ups en puerto D
 
     // PORTB como salida inicialmente encendido
-    LDI     R16, 0b00001111
+    LDI     R16, 0xFF
     OUT     DDRB, R16   // Setear puerto B como salida
-    LDI     R16, 0b11110000
+    LDI     R16, 0x00
     OUT     PORTB, R16  // Encender primer bit de puerto B
 
 	// PRESCALER
@@ -42,67 +47,80 @@ SETUP:
 
 
 	// PORTC como salidas
-	LDI		R16, 0xFF
-	OUT		DDRC, R16	//setear puerto C como salida
 	LDI		R16, 0x00
+	OUT		DDRC, R16	//setear puerto C como salida
+	LDI		R16, 0xFF
 	OUT		PORTC, R16	// Encender todos los bits del pueto C
 
 
 	// VALORES DE SALIDAS
     LDI     R17, 0x00  // Contador 1
-	LDI		R28, 0x00  // Contador 2
-	LDI		R20, 0
+	LDI		R20, 0x00  // Contador 2
+	
 
 
 // Loop infinito
 MAIN:
-	//OUT		PORTB, R17
-	//OUT		PORTC, R20
-    SBIS    PIND, SUBIR      // si pd2 es 0 saltar
+    SBIS    PINC, SUBIR      // si pd2 es 0 saltar
     CALL	INCREMENTO1		// ir a incremento
-	SBIS	PIND, BAJAR		// si pd3 es 0 saltar
+	SBIS	PINC, BAJAR		// si pd3 es 0 saltar
 	CALL    DECREMENTO1
-	//SBIS	PINB, BAJAR1	// lee el puerto pb4
-	//CALL	INCREMENTO2		
-	SBIS    PINB, SUBIR1	// lee el puerto pb5 
+	SBIS	PINC, SUBIR1	// lee el puerto pb4
+	CALL	INCREMENTO2		
+	SBIS    PINC, BAJAR1	// lee el puerto pb5 
 	CALL	DECREMENTO2
-	
-	     // Toggle de PB0
+	SBIS	PINC, SUMAR
+	CALL	SUMANDO
     RJMP    MAIN
 
 
 INCREMENTO1:
-	//CALL	DELAY
+	CALL	DELAY
 	INC		R17
-	OUT		PORTB, R17
-	RJMP	DELAY
-	RJMP	MAIN
+	CALL	UNION
+	RET
 
 DECREMENTO1:
-	//CALL	DELAY
+	CALL	DELAY
 	DEC		R17
-	OUT		PORTB, R17
-	RJMP	DELAY
-	RJMP	MAIN 
+	CALL	UNION
+	RET 
 
 INCREMENTO2:
-	//CALL	DELAY
-	INC		R28
-	OUT		PORTC, R28
-	RJMP	DELAY
-	RJMP	MAIN
-	//RET
+	CALL	DELAY
+	INC		R20
+	CALL	UNION
+	RET
+
 DECREMENTO2:
-	//CALL	DELAY
-	DEC		R28
-	OUT		PORTC, R28
-	RJMP	DELAY
-	RJMP	MAIN
-	//RET
+	CALL	DELAY
+	DEC		R20
+	CALL	UNION
+	RET
+
+UNION:
+    ANDI	R17, 0x0F    ; Asegura que solo queden los 4 bits bajos en R16 (xxxx0000 ? 0000xxxx)
+    ANDI	R20, 0x0F    ; Asegura que solo queden los 4 bits bajos en R17
+    SWAP	R20
+	MOV		R21, R17
+    OR		R21, R20
+	SWAP	R20   ; Une ambos valores (R16 ahora tiene xxxxLLLL)
+    OUT		PORTD, R21   ; Escribe en el puerto D
+	RET
+
+SUMANDO:
+	CALL	DELAY
+	MOV		R23, R17
+	ADD		R23, R20
+	ANDI	R23, 0x1F
+	OUT		PORTB, R23
+	RET
+
+
 // Sub-rutina (no de interrupción)
 DELAY:
-    LDI     R18, 0
-	LDI		R19, 0
+    LDI     R18, 0x00
+	LDI		R19, 0x00
 BUCLE:
 	INC		R18
 	CPI		R18, 0
@@ -111,6 +129,5 @@ BUCLE:
 	CPI		R19, 0
 	BRNE	BUCLE
     RET
-
 
 // Rutinas de interrupción
