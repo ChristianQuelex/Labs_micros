@@ -99,20 +99,20 @@ DECREMENTO2:
 	RET
 
 UNION:
-    ANDI	R17, 0x0F    ; Asegura que solo queden los 4 bits bajos en R16 (xxxx0000 ? 0000xxxx)
-    ANDI	R20, 0x0F    ; Asegura que solo queden los 4 bits bajos en R17
-    SWAP	R20
+    ANDI	R17, 0x0F   // Utilizar unicamente los primeros 4 bits
+    ANDI	R20, 0x0F    
+    SWAP	R20			//Cambiar los primeros bits por los ultimos
 	MOV		R21, R17
-    OR		R21, R20
-	SWAP	R20   ; Une ambos valores (R16 ahora tiene xxxxLLLL)
-    OUT		PORTD, R21   ; Escribe en el puerto D
+    OR		R21, R20	// Unir ambos registros
+	SWAP	R20			// Regresar registro a su estado original
+    OUT		PORTD, R21  // Presentar
 	RET
 
 SUMANDO:
 	CALL	DELAY
 	MOV		R23, R17
 	ADD		R23, R20
-	ANDI	R23, 0x1F
+	ANDI	R23, 0x1F	// Habilito overflow
 	OUT		PORTB, R23
 	RET
 
