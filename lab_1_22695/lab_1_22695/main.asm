@@ -29,15 +29,15 @@ SETUP:
 	STS	UCSR0B, R16
 
     LDI     R16, 0xFF
-    OUT     DDRD, R16   // Setear puerto D como entrada
+    OUT     DDRD, R16   // Setear puerto D como salida
     LDI     R16, 0x00
-    OUT     PORTD, R16  // Habilitar pull-ups en puerto D
+    OUT     PORTD, R16  // Iniciamos en 0
 
     // PORTB como salida inicialmente encendido
     LDI     R16, 0xFF
     OUT     DDRB, R16   // Setear puerto B como salida
     LDI     R16, 0x00
-    OUT     PORTB, R16  // Encender primer bit de puerto B
+    OUT     PORTB, R16  // Iniciamos en 0
 
 	// PRESCALER
 	LDI		R22, (1 << CLKPCE)
@@ -50,8 +50,7 @@ SETUP:
 	LDI		R16, 0x00
 	OUT		DDRC, R16	//setear puerto C como salida
 	LDI		R16, 0xFF
-	OUT		PORTC, R16	// Encender todos los bits del pueto C
-
+	OUT		PORTC, R16	// Habilitamos pull-up
 
 	// VALORES DE SALIDAS
     LDI     R17, 0x00  // Contador 1
