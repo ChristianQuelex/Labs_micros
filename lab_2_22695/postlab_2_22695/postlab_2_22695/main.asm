@@ -1,6 +1,6 @@
 ;UNIVERSIDAD DEL VALLE DE GUATEMALA
 ;IE2023: PROGRAMACIÓN DE MICROCONTROLADORES
-;Laboratorio1.asm
+;Laboratorio2.asm
 ;AUTOR: Christian Quelex
 ;PROYECTO: Contadores binarios de 4 bits AUTO
 ;HARDWARE: ATMEGA328P
