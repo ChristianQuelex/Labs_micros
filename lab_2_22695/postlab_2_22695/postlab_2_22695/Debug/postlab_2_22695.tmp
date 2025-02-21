@@ -25,11 +25,11 @@
  <LABELS>
   <T7S><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>21</LINE></T7S>
   <SETUP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>24</LINE></SETUP>
-  <TIMER><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>161</LINE></TIMER>
-  <LOOP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>68</LINE></LOOP>
-  <DECREMENTAR><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>145</LINE></DECREMENTAR>
-  <INCREMENTAR><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>132</LINE></INCREMENTAR>
-  <ZERO><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>158</LINE></ZERO>
-  <DELAYBOUNCE><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>114</LINE></DELAYBOUNCE>
+  <TIMER><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>155</LINE></TIMER>
+  <LOOP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>62</LINE></LOOP>
+  <DECREMENTAR><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>139</LINE></DECREMENTAR>
+  <INCREMENTAR><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>126</LINE></INCREMENTAR>
+  <ZERO><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>152</LINE></ZERO>
+  <DELAYBOUNCE><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_2_22695\postlab_2_22695\postlab_2_22695\main.asm</FILE><LINE>108</LINE></DELAYBOUNCE>
  </LABELS>
 </ASSEMBLER_INFO>
