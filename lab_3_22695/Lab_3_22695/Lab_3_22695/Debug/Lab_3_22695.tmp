@@ -23,12 +23,17 @@
   <FILE>Lab_3_22695.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <SETUP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>29</LINE></SETUP>
-  <ISR_TIMER0><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>103</LINE></ISR_TIMER0>
-  <MAIN><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>20</LINE></MAIN>
-  <SEG><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>27</LINE></SEG>
-  <INIT_T0><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>92</LINE></INIT_T0>
-  <LOOP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>59</LINE></LOOP>
-  <DISPLAY><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>73</LINE></DISPLAY>
+  <SETUP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>32</LINE></SETUP>
+  <ISR_PCINT1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>96</LINE></ISR_PCINT1>
+  <ISR_TIMER0><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>170</LINE></ISR_TIMER0>
+  <MAIN><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>23</LINE></MAIN>
+  <SEG><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>30</LINE></SEG>
+  <INIT_T0><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>159</LINE></INIT_T0>
+  <LOOP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>78</LINE></LOOP>
+  <DISPLAY><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>146</LINE></DISPLAY>
+  <CHECKPC1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>112</LINE></CHECKPC1>
+  <DELAY><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>130</LINE></DELAY>
+  <EXIT><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>122</LINE></EXIT>
+  <BUCLE><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Lab_3_22695\Lab_3_22695\main.asm</FILE><LINE>134</LINE></BUCLE>
  </LABELS>
 </ASSEMBLER_INFO>
