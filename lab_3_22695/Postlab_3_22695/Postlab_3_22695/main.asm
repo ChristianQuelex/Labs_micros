@@ -112,18 +112,18 @@ DISPLAY2:
 
 INIT_T0:
 	LDI		R16, (1 << CS02) | (1 << CS00)
-	OUT		TCCR0B, R16			;SET PRESCALER, 1024
+	OUT		TCCR0B, R16		// prescaler de 1024
 
-	LDI		R16, 99			;OVERFLOW VALUE, EVERY 10ms
-	OUT		TCNT0, R16		;LOAD START VALUE OF TIMER
+	LDI		R16, 99			// valor de overflow
+	OUT		TCNT0, R16		// cargar el valor de overflow
 
 	LDI		R16, (1 << TOIE0)
-	STS		TIMSK0, R16			;INTERRUPTION ENABLE
+	STS		TIMSK0, R16			// habilitar interrupcion
 	RET
 
 ISR_TIMER0:
-	LDI		R16, 99			;VALUE OF TIMER OVERFLOW
-	OUT		TCNT0, R16		;LOAD THE OVERFLOW VALUE
-	SBI		TIFR0, TOV0		;TURN OFF FLAG
-	INC		R20				;INCREASE COUNTER OF 10ms
+	LDI		R16, 99			// valor de timer
+	OUT		TCNT0, R16		// cargar valor de overflow
+	SBI		TIFR0, TOV0		// Apagar bandera
+	INC		R20				// Incrementar contador cada 10ms
 	RETI
