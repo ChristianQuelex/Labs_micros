@@ -1,0 +1,37 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.INC</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\Debug\Postlab_3_22695.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Postlab_3_22695.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Postlab_3_22695.map</FILE>
+  <FILE>Postlab_3_22695.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <SETUP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>28</LINE></SETUP>
+  <ISR_TIMER0><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>124</LINE></ISR_TIMER0>
+  <MAIN><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>19</LINE></MAIN>
+  <SEG><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>26</LINE></SEG>
+  <INIT_T0><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>113</LINE></INIT_T0>
+  <LOOP><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>54</LINE></LOOP>
+  <DISPLAY1><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>95</LINE></DISPLAY1>
+  <DISPLAY2><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>104</LINE></DISPLAY2>
+  <ZERO><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>84</LINE></ZERO>
+  <SIX><FILE>C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm</FILE><LINE>91</LINE></SIX>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -160,7 +160,7 @@ INIT_T0:				//Desbordamiento para cada 10 ms
 	LDI		R16, (1 << CS02) | (1 << CS00)
 	OUT		TCCR0B, R16			// Prescaler de 1024
 
-	LDI		R16, 99			;OVERFLOW VALUE, EVERY 10ms
+	LDI		R16, 99			// varlor de overflow
 	OUT		TCNT0, R16		// Cargar el inicio para el timer
 
 	LDI		R16, (1 << TOIE0)	// TOIE0 interrupcion por desbordamiento 
