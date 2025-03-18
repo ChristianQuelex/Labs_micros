@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm Thu Feb 27 12:03:18 2025
+AVRASM ver. 2.2.8  C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm Thu Mar 06 01:39:59 2025
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\Postlab_3_22695\main.asm(11): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.INC'
@@ -1073,8 +1073,8 @@ C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\
 000033 e000                      	LDI		R16, 0x00
 000034 b90b                      	OUT		PORTD, R16
                                  
-000035 9a24                      	SBI		DDRB, PB4		// Salidas para multiplexiar 
-000036 9a25                      	SBI		DDRB, PB5
+000035 9a22                      	SBI		DDRB, PB2		// Salidas para multiplexiar 
+000036 9a23                      	SBI		DDRB, PB3
                                  
 000037 e050                      	LDI		R21, 0				// configuracion de lista
 000038 e0f0                      	LDI		ZH, HIGH(SEG << 1)
@@ -1090,23 +1090,23 @@ C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\
 000041 e070                      	LDI		R23, 0				// Contador de Decenas
                                  
                                  LOOP:
-000042 982c                      	CBI		PORTB, PB4			// poner a 0 PB4
+000042 982a                      	CBI		PORTB, PB2			// poner a 0 PB4
 000043 2766                      	CLR		R22					// limpiar R22
 000044 b96b                      	OUT		PORTD, R22			// Presenta
-000045 982c                      	CBI		PORTB, PB4
+000045 982a                      	CBI		PORTB, PB2
 000046 940e 0063                 	CALL	DISPLAY1			// Mover a Display 1
-000048 9a2d                      	SBI		PORTB, PB5			// Encerder PB5
-000049 982c                      	CBI		PORTB, PB4			// Poner a 0
+000048 9a2b                      	SBI		PORTB, PB3			// Encerder PB5
+000049 982a                      	CBI		PORTB, PB2			// Poner a 0
 00004a b96b                      	OUT		PORTD, R22			//Presentar R22
                                  	
                                  
-00004b 982d                      	CBI		PORTB, PB5
+00004b 982b                      	CBI		PORTB, PB3
 00004c 2788                      	CLR		R24
 00004d b98b                      	OUT		PORTD, R24
-00004e 982d                      	CBI		PORTB, PB5
+00004e 982b                      	CBI		PORTB, PB3
 00004f 940e 006a                 	CALL	DISPLAY2
-000051 9a2c                      	SBI		PORTB, PB4			// Mover a Display 2
-000052 982d                      	CBI		PORTB, PB5		;MUX
+000051 9a2a                      	SBI		PORTB, PB2			// Mover a Display 2
+000052 982b                      	CBI		PORTB, PB3		;MUX
 000053 b98b                      	OUT		PORTD, R24		;IT SHOWS
                                  
 000054 3644                      	CPI		R20, 100			// 100 * 10ms = 1000ms incremento
@@ -1150,20 +1150,20 @@ C:\Users\Chris Q\Documents\Micros\laboratorios\Labs\lab_3_22695\Postlab_3_22695\
                                  
                                  INIT_T0:
 000071 e005                      	LDI		R16, (1 << CS02) | (1 << CS00)
-000072 bd05                      	OUT		TCCR0B, R16			;SET PRESCALER, 1024
+000072 bd05                      	OUT		TCCR0B, R16		// prescaler de 1024
                                  
-000073 e603                      	LDI		R16, 99			;OVERFLOW VALUE, EVERY 10ms
-000074 bd06                      	OUT		TCNT0, R16		;LOAD START VALUE OF TIMER
+000073 e603                      	LDI		R16, 99			// valor de overflow
+000074 bd06                      	OUT		TCNT0, R16		// cargar el valor de overflow
                                  
 000075 e001                      	LDI		R16, (1 << TOIE0)
-000076 9300 006e                 	STS		TIMSK0, R16			;INTERRUPTION ENABLE
+000076 9300 006e                 	STS		TIMSK0, R16			// habilitar interrupcion
 000078 9508                      	RET
                                  
                                  ISR_TIMER0:
-000079 e603                      	LDI		R16, 99			;VALUE OF TIMER OVERFLOW
-00007a bd06                      	OUT		TCNT0, R16		;LOAD THE OVERFLOW VALUE
-00007b 9aa8                      	SBI		TIFR0, TOV0		;TURN OFF FLAG
-00007c 9543                      	INC		R20				;INCREASE COUNTER OF 10ms
+000079 e603                      	LDI		R16, 99			// valor de timer
+00007a bd06                      	OUT		TCNT0, R16		// cargar valor de overflow
+00007b 9aa8                      	SBI		TIFR0, TOV0		// Apagar bandera
+00007c 9543                      	INC		R20				// Incrementar contador cada 10ms
 
 
 RESOURCE USE INFORMATION

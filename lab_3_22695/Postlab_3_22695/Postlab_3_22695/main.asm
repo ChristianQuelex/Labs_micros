@@ -35,8 +35,8 @@ SETUP:
 	LDI		R16, 0x00
 	OUT		PORTD, R16
 
-	SBI		DDRB, PB4		// Salidas para multiplexiar 
-	SBI		DDRB, PB5
+	SBI		DDRB, PB2		// Salidas para multiplexiar 
+	SBI		DDRB, PB3
 
 	LDI		R21, 0				// configuracion de lista
 	LDI		ZH, HIGH(SEG << 1)
@@ -52,23 +52,23 @@ SETUP:
 	LDI		R23, 0				// Contador de Decenas
 
 LOOP:
-	CBI		PORTB, PB4			// poner a 0 PB4
+	CBI		PORTB, PB2			// poner a 0 PB4
 	CLR		R22					// limpiar R22
 	OUT		PORTD, R22			// Presenta
-	CBI		PORTB, PB4
+	CBI		PORTB, PB2
 	CALL	DISPLAY1			// Mover a Display 1
-	SBI		PORTB, PB5			// Encerder PB5
-	CBI		PORTB, PB4			// Poner a 0
+	SBI		PORTB, PB3			// Encerder PB5
+	CBI		PORTB, PB2			// Poner a 0
 	OUT		PORTD, R22			//Presentar R22
 	
 
-	CBI		PORTB, PB5
+	CBI		PORTB, PB3
 	CLR		R24
 	OUT		PORTD, R24
-	CBI		PORTB, PB5
+	CBI		PORTB, PB3
 	CALL	DISPLAY2
-	SBI		PORTB, PB4			// Mover a Display 2
-	CBI		PORTB, PB5		;MUX
+	SBI		PORTB, PB2			// Mover a Display 2
+	CBI		PORTB, PB3		;MUX
 	OUT		PORTD, R24		;IT SHOWS
 
 	CPI		R20, 100			// 100 * 10ms = 1000ms incremento
