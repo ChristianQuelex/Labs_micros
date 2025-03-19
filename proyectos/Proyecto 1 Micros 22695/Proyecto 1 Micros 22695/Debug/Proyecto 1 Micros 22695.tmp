@@ -1,0 +1,97 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.INC</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\Debug\Proyecto 1 Micros 22695.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Proyecto 1 Micros 22695.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Proyecto 1 Micros 22695.map</FILE>
+  <FILE>Proyecto 1 Micros 22695.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <SETUP><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>38</LINE></SETUP>
+  <ISR_PCINT1><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>891</LINE></ISR_PCINT1>
+  <ISR_TIMER0><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1331</LINE></ISR_TIMER0>
+  <MAIN><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>29</LINE></MAIN>
+  <SEG><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>36</LINE></SEG>
+  <INIT_T0><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1320</LINE></INIT_T0>
+  <LOOP><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>111</LINE></LOOP>
+  <ESTADO0PASO><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>151</LINE></ESTADO0PASO>
+  <ESTADO1PASO><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>153</LINE></ESTADO1PASO>
+  <ESTADO2PASO><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>159</LINE></ESTADO2PASO>
+  <ESTADO3PASO><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>164</LINE></ESTADO3PASO>
+  <ESTADO4PASO><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>169</LINE></ESTADO4PASO>
+  <ESTADO5PASO><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>171</LINE></ESTADO5PASO>
+  <ESTADO0><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>200</LINE></ESTADO0>
+  <ESTADO1><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>281</LINE></ESTADO1>
+  <ESTADO2><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>305</LINE></ESTADO2>
+  <ESTADO3><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>325</LINE></ESTADO3>
+  <ESTADO4><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>344</LINE></ESTADO4>
+  <ESTADO5><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>364</LINE></ESTADO5>
+  <SECONDS_DISPLAYS><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>790</LINE></SECONDS_DISPLAYS>
+  <CLEAN><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>810</LINE></CLEAN>
+  <DISPLAY><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>818</LINE></DISPLAY>
+  <D7><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>269</LINE></D7>
+  <LOOPS0><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>276</LINE></LOOPS0>
+  <ZEROSP><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>273</LINE></ZEROSP>
+  <ZEROS><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>681</LINE></ZEROS>
+  <MUX_DISPLAYS><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>750</LINE></MUX_DISPLAYS>
+  <LOOPS1><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>300</LINE></LOOPS1>
+  <ZEROSP1><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>302</LINE></ZEROSP1>
+  <LOOPS2><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>319</LINE></LOOPS2>
+  <ZEROSP2><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>321</LINE></ZEROSP2>
+  <LOOPS3><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>339</LINE></LOOPS3>
+  <ZEROSP3><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>341</LINE></ZEROSP3>
+  <LOOPS4><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>358</LINE></LOOPS4>
+  <ZEROSP4><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>360</LINE></ZEROSP4>
+  <LOOPS5><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>419</LINE></LOOPS5>
+  <RESET_CH><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>381</LINE></RESET_CH>
+  <ASSIGN_TIME><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>394</LINE></ASSIGN_TIME>
+  <RST_T><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>387</LINE></RST_T>
+  <ZEROSP5><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>422</LINE></ZEROSP5>
+  <SIXS><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>692</LINE></SIXS>
+  <ZEROM><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>705</LINE></ZEROM>
+  <SIXM><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>716</LINE></SIXM>
+  <ZEROSH><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>729</LINE></ZEROSH>
+  <ENDTIME><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>738</LINE></ENDTIME>
+  <SHOW_STATE_SC><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>826</LINE></SHOW_STATE_SC>
+  <MUX_DISPLAYS_A><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>838</LINE></MUX_DISPLAYS_A>
+  <ESTADO0_ISR_P><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>925</LINE></ESTADO0_ISR_P>
+  <ESTADO1_ISR_P><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>927</LINE></ESTADO1_ISR_P>
+  <ESTADO2_ISR_P><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>929</LINE></ESTADO2_ISR_P>
+  <ESTADO3_ISR_P><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>931</LINE></ESTADO3_ISR_P>
+  <ESTADO4_ISR_P><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>933</LINE></ESTADO4_ISR_P>
+  <ESTADO0_ISR><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>951</LINE></ESTADO0_ISR>
+  <ESTADO1_ISR><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>968</LINE></ESTADO1_ISR>
+  <ESTADO2_ISR><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1007</LINE></ESTADO2_ISR>
+  <ESTADO3_ISR><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1048</LINE></ESTADO3_ISR>
+  <ESTADO4_ISR><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1088</LINE></ESTADO4_ISR>
+  <ISR_POP><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1311</LINE></ISR_POP>
+  <INF_LIM><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>987</LINE></INF_LIM>
+  <SUP_LIM><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>984</LINE></SUP_LIM>
+  <END_ISR1><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>995</LINE></END_ISR1>
+  <INF_LIM_S2><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1027</LINE></INF_LIM_S2>
+  <SUP_LIM_S2><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1024</LINE></SUP_LIM_S2>
+  <END_ISR2><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1035</LINE></END_ISR2>
+  <INF_LIM3><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1066</LINE></INF_LIM3>
+  <SUP_LIM3><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1063</LINE></SUP_LIM3>
+  <END_ISR3><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1074</LINE></END_ISR3>
+  <INF_LIM4><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1108</LINE></INF_LIM4>
+  <SUP_LIM4><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1105</LINE></SUP_LIM4>
+  <END_ISR4><FILE>C:\Users\Chris Q\Documents\Micros\proyectos\Proyecto 1 Micros 22695\Proyecto 1 Micros 22695\main.asm</FILE><LINE>1116</LINE></END_ISR4>
+ </LABELS>
+</ASSEMBLER_INFO>
