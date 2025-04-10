@@ -1,7 +1,7 @@
 /*
- * Postlab4.c
+ * Lab4.c
  *
- * Created: 4/04/2025 06:39:20
+ * Created: 4/04/2025
  * Author : Christian Quelex
  */ 
 
@@ -20,54 +20,57 @@ void initPCINT0(void);
 
 int main(void)
 {
-	cli();
-	DDRC |= (1 << PINC1) | (1 << PINC2) | (1 << PINC3) | (1 << PINC4);
+	cli();				// deactivate interruption 
+	DDRC |= (1 << PINC1) | (1 << PINC2) | (1 << PINC3) | (1 << PINC4);		// output 
 	PORTC = 0;
-	PORTC |= (1 << PORTC1);
+	PORTC |= (1 << PORTC1);			// one active 
 	
-	DDRD = 0xFF;
+	DDRD = 0xFF;				// output 
 	PORTD = 0;
-	UCSR0B = 0;
+	UCSR0B = 0;					// off us art 
 	
-	PORTB |= (1 << PINB2) | (1 << PINB3);		//pins as ouput w pull up
+	PORTB |= (1 << PINB2) | (1 << PINB3);		//pins as output with pull up
 	DDRB &= ~(1 << PINB2) | ~(1 << PINB3);		//inputs
 	
-	initADC();
-	initPCINT0();
-	sei();
+	
+	
+	initADC();					// configuration ADC
+	initPCINT0();				// configuration Buttons
+	sei();						//active interruption 
 
 	//infinite loop
     while (1) 
     {
-		ADCSRA |= (1 << ADSC);
+		ADCSRA |= (1 << ADSC);				// star conversion ADC
 		_delay_ms(5);
 		
 		uint8_t decValue = ADCH;			//show in portd value of adc
-		uint8_t value1 = decValue / 16;		//cociente
-		uint8_t value2 = decValue % 16;		//resto
+		uint8_t value1 = decValue / 16;		//cociente  more significant
+		uint8_t value2 = decValue % 16;		//resto		less significant  
 		
 		//mux
 		PORTC = 0;
 		PORTC |= (1 << PORTC1);
 		PORTC &= ~(1 << PORTC2) | ~(1 << PORTC3);
-		PORTD = counter;
+		PORTD = counter;					// show leds
 		_delay_ms(5);
 		
 		PORTC = 0;
 		PORTC |= (1 << PORTC2);
 		PORTC &= ~(1 << PORTC1) | ~(1 << PORTC3);
 		PORTD = display[value1];
-		_delay_ms(5);
+		_delay_ms(5);						// show pc2
 		
 		PORTC = 0;
 		PORTC |= (1 << PORTC3);
 		PORTC &= ~(1 << PORTC2) | ~(1 << PORTC1);
-		PORTD = display[value2];
+		PORTD = display[value2];			// show pc3
+		_delay_ms(5); 
 		
-		if(decValue > counter){
-			PORTC |= (1 << PORTC4);
+		if (decValue > counter){
+			PORTC |= (1 << PORTC4);		// or, high
 		}else{
-			PORTC &= ~(1 << PORTC4);
+			PORTC &= ~(1 << PORTC4);	// and, low 
 		}
     }
 }
@@ -87,20 +90,24 @@ void initADC(void){
 	//prescaler 128 > 125kHz
 	ADCSRA |= (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
 	
-	DIDR0 |= (1 << ADC0D);	//disable PC0 digital input 
+	DIDR0 |= (1 << ADC0D);	//disable PC0 digital input algo
+	
 }
 
-
+ISR (ADC_vect){
+	//PORTD = ADCH;			//show in portd value of adc
+	ADCSRA |= (1 << ADIF);	//turn off flag
+}
 
 void initPCINT0(void){
-	PCICR |= (1 << PCIE0);			//pin change
+	PCICR |= (1 << PCIE0);			//interruption pin change
 	PCMSK0 |= (1 << PCINT2) | (1 << PCINT3);	//mask
 }
 
 ISR (PCINT0_vect){
 	if (!(PINB & (1 << PINB2))) {
-		counter++;
+		counter++;					// increment 
 	}else if (!(PINB & (1 << PINB3))) {
-		counter--;
+		counter--;					// decrement 
 	}
 }
