@@ -90,10 +90,7 @@ void initADC(void){
 	DIDR0 |= (1 << ADC0D);	//disable PC0 digital input 
 }
 
-ISR (ADC_vect){
-	//PORTD = ADCH;			//show in portd value of adc
-	ADCSRA |= (1 << ADIF);	//turn off flag
-}
+
 
 void initPCINT0(void){
 	PCICR |= (1 << PCIE0);			//pin change
