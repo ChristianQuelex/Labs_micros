@@ -68,9 +68,9 @@ int main(void)
 		_delay_ms(5); 
 		
 		if (decValue > counter){
-			PORTC |= (1 << PORTC4);
+			PORTC |= (1 << PORTC4);		// or, high
 		}else{
-			PORTC &= ~(1 << PORTC4);
+			PORTC &= ~(1 << PORTC4);	// and, low 
 		}
     }
 }
@@ -90,7 +90,8 @@ void initADC(void){
 	//prescaler 128 > 125kHz
 	ADCSRA |= (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
 	
-	DIDR0 |= (1 << ADC0D);	//disable PC0 digital input 
+	DIDR0 |= (1 << ADC0D);	//disable PC0 digital input algo
+	
 }
 
 ISR (ADC_vect){
