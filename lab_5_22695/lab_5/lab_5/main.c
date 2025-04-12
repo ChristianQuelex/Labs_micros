@@ -73,11 +73,11 @@ int main(void)
 
 		 _delay_ms(10);
 		
-		ADCSRA |= (1 << ADSC);		// Inicia conversión ADC
-		_delay_ms(2);				// Espera un poco para asegurarse que termina
+		//ADCSRA |= (1 << ADSC);		// Inicia conversión ADC
+		//_delay_ms(2);				// Espera un poco para asegurarse que termina
 		
 		
-		convertServo(ADCH, channelB);			// Ajusta el duty del canalB según entrada analógica
+		//convertServo(ADCH, channelB);			// Ajusta el duty del canalB según entrada analógica
 		
 		/*i = ADCH;
 		j = (200/12)*i+1000;
@@ -109,18 +109,30 @@ void initADC(void){
 
 uint16_t readADC(uint8_t canal)
 {
-	ADMUX = (1 << REFS0) | (canal & 0x0F); // Seleccionar canal y referencia
-	_delay_ms(1); // Tiempo de adquisición
+	canal &= 0x07;
+	
+	
+	// Configurar el canal
+	ADMUX = (ADMUX & 0xF0) | canal;
+	
+	// Iniciar conversión
+	ADCSRA |= (1 << ADSC);
+	
+	// Esperar a que termine la conversión
+	while (ADCSRA & (1 << ADSC));
+	
+	//ADMUX = (1 << REFS0) | (canal & 0x0F); // Seleccionar canal y referencia
+	//_delay_ms(10); // Tiempo de adquisición
 
-	ADCSRA |= (1 << ADSC); // Iniciar conversión
-	while (ADCSRA & (1 << ADSC)); // Esperar
+	//ADCSRA |= (1 << ADSC); // Iniciar conversión
+	//while (ADCSRA & (1 << ADSC)); // Esperar
 
-	return ADC; // Valor de 10 bits
+	return ADCH; // Valor de 10 bits
 }
 
 
 
 ISR (ADC_vect){
-	PORTD = ADCH;			//show in portd value of adc
+	//PORTD = ADCH;			//show in portd value of adc
 	ADCSRA |= (1 << ADIF);	//turn off flag
 }
