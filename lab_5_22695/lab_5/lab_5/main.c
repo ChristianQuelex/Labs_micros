@@ -1,4 +1,5 @@
-/*
+/* Microcontroladores
+ * Autor: Christian Quelex
  * Prelab5.c - Control de 2 servos + LED con PWM de alta frecuencia
  * Versión completa lista para usar
  */
